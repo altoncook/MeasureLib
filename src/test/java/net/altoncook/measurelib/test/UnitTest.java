@@ -36,5 +36,9 @@ class UnitTest {
         registerTestEquals("inch, inches (in)", INCHES.toString());
         registerTestEquals("foot, feet (ft)", FEET.toString());
         space();
+
+        registerTestEquals("i, i (i)", IMAGINARY.toString());
+        registerTestEquals("1.00 × 10^0 pi", VALUE.of(3.14159).in(PI_UNITS).toString());
+
     }
 }

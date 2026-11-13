@@ -1,11 +1,14 @@
 package net.altoncook.measurelib.unit;
 
-import net.altoncook.measurelib.unit.dimensions.DistanceUnit;
-import net.altoncook.measurelib.unit.dimensions.MassUnit;
-import net.altoncook.measurelib.unit.dimensions.TimeUnit;
+import net.altoncook.measurelib.unit.dimensions.*;
 
 public class Units {
     // TODO: add easier way to build units off of each other, like having feet just be defined as 12 inches
+    public static final RealUnit VALUE = new RealUnit("", "", "", null, 1);
+    public static final RealUnit PI_UNITS = new RealUnit("pi", "pi", "π", VALUE, Math.PI);
+
+    public static final ImagnaryUnit IMAGINARY = new ImagnaryUnit("i", "i", "i", null, 1);
+
     public static final DistanceUnit METERS = new DistanceUnit("meters", "meter", "m", null, 1);
     public static final DistanceUnit CENTIMETERS = new DistanceUnit("centimeters", "centimeters", "cm", METERS, 1 / 100D);
     public static final DistanceUnit FEET = new DistanceUnit("feet", "foot", "ft", METERS, 0.3048D);
