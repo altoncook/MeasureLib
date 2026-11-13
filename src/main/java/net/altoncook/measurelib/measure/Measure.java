@@ -18,6 +18,10 @@ public class Measure<U extends Unit> {
     }
 
     public Measure<U> in(U other) {
+        // if the other unit is the same as this unit, just return this
+        if (other == unit) {
+            return this;
+        }
         return new Measure<>(other.fromBaseUnit(unit.toBaseUnit(magnitude)), other);
     }
 
